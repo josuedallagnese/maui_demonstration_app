@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:sys="clr-namespace:System;assembly=netstandard"
+       xmlns:views="clr-namespace:MauiDemonstrationApp.Views"
+       xmlns:viewsCustomer="clr-namespace:MauiDemonstrationApp.Views.Customers"
+       x:Class="MauiDemonstrationApp.AppShell"
+       x:Name="shell"
+       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundImageAspect="AspectFill"
+       FlyoutHeaderBehavior="CollapseOnScroll">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Route="home"
+              Title="Home"
+              ContentTemplate="{DataTemplate views:MainPage}" />
+
+        <ShellContent Route="customers"
+                      Title="Customers"
+                      ContentTemplate="{DataTemplate viewsCustomer:CustomerListPage}" />
+    </FlyoutItem>
+
+</Shell>
